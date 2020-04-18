@@ -40,11 +40,19 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] Explain the difference between `Relational Databases` and `SQL`.
 
+  <!-- I was under the impression that relational databases and sql were the same thing. Relational databases use tables and can link or ‘relate’ data between tables where a non relational database cannot. Not sure if that is what is being asked or if I misunderstand the question. -->
+
 - [ ] Why do tables need a `primary key`?
+
+  <!-- Primary key is how each individual record is identified. Relational databases also depend on primary keys to link to other tables. -->
 
 - [ ] What is the name given to a table column that references the primary key on another table.
 
+  <!-- Foriegn key. -->
+
 - [ ] What do we need in order to have a _many to many_ relationship between two tables.
+
+  <!-- You need some kind of intermediary table so that you don’t have redundant data in two different tables. -->
 
 ## Minimum Viable Product
 
