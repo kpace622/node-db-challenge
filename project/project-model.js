@@ -23,7 +23,7 @@ function postTask(newTask) {
 function findTasks(id) {
     return db('projects as p')
     .join('task as t', 'p.id', 't.project_id')
-    .select('t.task_desc')
+    .select('p.project_name')
     .where({project_id: id})
 }
 

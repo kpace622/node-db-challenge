@@ -67,8 +67,11 @@ router.get('/tasks/:id', (req, res) => {
 
     Projects.findTasks(id)
         .then(tasks => {
-            console.log(tasks)
-            res.json(tasks)
+            if (tasks) {
+                res.json(tasks)
+            } else {
+                res.status(404).json({message: 'invalid id'})
+            }
         })
         .catch(err => {
             res.status(500).json({message: 'failed to find task'})

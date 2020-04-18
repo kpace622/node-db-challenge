@@ -19,6 +19,7 @@ exports.up = function(knex) {
             tbl.string('task_notes', 128)
             tbl.integer('task_completed').defaultTo(0).notNullable()
             tbl.integer('project_id')
+                .notNullable()
                 .unsigned()
                 .references('projects.id')
                 .onDelete('SET NULL')
@@ -26,6 +27,7 @@ exports.up = function(knex) {
         })
         .createTable('project_resource', tbl => {
             tbl.integer('project_id')
+                .notNullable()
                 .unsigned()
                 .references('project.id')
                 .onDelete('SET NULL')
